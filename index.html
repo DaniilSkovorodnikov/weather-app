@@ -10,23 +10,54 @@
 </head>
 <body>
     <div class="container">
-        <div class="widget">
-            <form action="" class="location-form">
-                <div class="field">
-                    <label for="latitude-field">Широта</label>
-                    <input type="text" name="latitude" id="latitude-field">
+        <ul class="widgets">
+            <div class="widget">
+                <div class="widget__left">
+                    <form action="" class="location-form">
+                        <div class="field">
+                            <label>Широта</label>
+                            <input type="text" name="latitude" class="latitude-input">
+                        </div>
+                        <div class="field">
+                            <label>Долгота</label>
+                            <input type="text" name="latitude" class="longitude-input">
+                        </div>
+                        <button type="submit" class="submit-btn">Показать погоду</button>
+                    </form>
+                    <div class="weather-info">
+                        <div class="weather-info__main">
+                            <p class="weather-info__time">-</p>
+                            <img src="" alt="" width="60" height="60" class="weather-info__img">
+                            <p class="weather-info__temperature">-</p>
+                        </div>
+                        <div class="weather-info__extra">
+                            <div class="weather-info__field">
+                                <p class="weather-info__label">Сила ветра</p>
+                                <p class="weather-info__value wind-force">-</p>
+                            </div>
+
+                            <div class="weather-info__field">
+                                <p class="weather-info__label">Давление</p>
+                                <p class="weather-info__value pressure">-</p>
+                            </div>
+
+                            <div class="weather-info__field">
+                                <p class="weather-info__label">Влажность</p>
+                                <p class="weather-info__value humidity">-</p>
+                            </div>
+
+                            <div class="weather-info__field">
+                                <p class="weather-info__label">По ощущениям</p>
+                                <p class="weather-info__value temp-feels">-</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="field">
-                    <label for="longitude-field">Долгота</label>
-                    <input type="text" name="latitude" id="longitude-field">
-                </div>
-                <button type="submit" class="submit-btn">Показать погоду</button>
-            </form>
-            <div class="weather-info">
-                28
             </div>
-        </div>
+        </ul>
+        <button class="add-btn">+</button>
     </div>
 </body>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
 <script src="index.js"></script>
 </html>
