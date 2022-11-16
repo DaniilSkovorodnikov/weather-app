@@ -108,10 +108,7 @@ class Widget{
     getWeatherImg(weatherType){
         let path = this.currentWeatherType.src;
         const lastSlashIndex = path.lastIndexOf('/');
-        const fileExtension = path.slice(path.lastIndexOf('.'));
-        path = fileExtension === ".html" ?
-            `${path.slice(0, lastSlashIndex + 1)}src/img/${imgPaths[weatherType]}` :
-            `${path.slice(0, lastSlashIndex + 1)}${imgPaths[weatherType]}`;
+        path = `${path.slice(0, lastSlashIndex + 1)}src/img/${imgPaths[weatherType]}`
         console.log(path);
         return path;
     }

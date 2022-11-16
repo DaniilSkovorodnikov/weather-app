@@ -23,6 +23,10 @@ input{
   height: 35px;
 }
 
+img{
+  background-color: transparent;
+}
+
 button{
   height: 70px;
   background-color: #355fca;
