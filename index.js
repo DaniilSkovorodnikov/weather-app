@@ -69,7 +69,7 @@ class Widget{
             .then((v) => {
                 console.log(v);
                 this.currentWeather.textContent = Math.round(v["main"]["temp"] - 272.1).toString() + " °C";
-                this.currentWeatherType.src = this.getWeatherImg(v["weather"][0]["main"]);
+                this.currentWeatherType.src = `http://openweathermap.org/img/wn/${v["weather"][0]["icon"]}@2x.png`
                 this.currentTime.textContent = `${currentDate.getHours()}:${currentDate.getMinutes()}`;
                 this.currentWind.textContent = `${v["wind"]["speed"]} м/с`;
                 this.currentPressure.textContent = `${Math.round(v["main"]["pressure"] * 100 / 133.3)} мм.рт.ст.`;
@@ -103,14 +103,6 @@ class Widget{
             isNaN(Number(this.longitudeInput.value)) ||
             Number(this.latitudeInput.value) > 90 || Number(this.latitudeInput.value) < -90 ||
             Number(this.longitudeInput.value) > 180 || Number(this.longitudeInput.value) < -180;
-    }
-
-    getWeatherImg(weatherType){
-        let path = this.currentWeatherType.src;
-        const lastSlashIndex = path.lastIndexOf('/');
-        path = `${path.slice(0, lastSlashIndex + 1)}src/img/${imgPaths[weatherType]}`
-        console.log(path);
-        return path;
     }
 }
 

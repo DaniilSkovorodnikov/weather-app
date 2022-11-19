@@ -24,7 +24,7 @@ input{
 }
 
 img{
-  background-color: transparent;
+  filter: brightness(80%);
 }
 
 button{
