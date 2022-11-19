@@ -6,13 +6,6 @@ const addButton = document.querySelector(".add-btn");
 const currentDate = new Date();
 let latitudeInputs, longitudeInputs, submitButtons, currentWeatherFields, currentTimeFields,
     currentWindFields, currentWeatherTypes ,currentPressureFields, currentHumidityFields, currentTempFeelsFields
-const imgPaths = {
-    'Clear': "clear.jpg",
-    'Rain': "cloudy.png",
-    'Haze': "haze.png",
-    'Clouds': "rain.jpg",
-    'Snow': "snow.png"
-}
 
 addButton.addEventListener("click", () => {
     container.insertAdjacentHTML("beforeend", widgetHTML);
