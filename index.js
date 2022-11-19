@@ -60,7 +60,6 @@ class Widget{
         fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`)
             .then((res) => res.json())
             .then((v) => {
-                console.log(v);
                 this.currentWeather.textContent = Math.round(v["main"]["temp"] - 272.1).toString() + " °C";
                 this.currentWeatherType.src = `http://openweathermap.org/img/wn/${v["weather"][0]["icon"]}@2x.png`
                 this.currentTime.textContent = `${currentDate.getHours()}:${currentDate.getMinutes()}`;
